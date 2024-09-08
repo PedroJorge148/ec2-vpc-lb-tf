@@ -14,7 +14,7 @@ resource "aws_subnet" "public_subnets" {
   availability_zone = element(var.azs, count.index)
 
   tags = {
-    Name = "Public Subnet ${count.index + 1}"
+    Name = "public-subnet-${count.index + 1}"
   }
 }
 
@@ -25,7 +25,7 @@ resource "aws_subnet" "private_subnets" {
   availability_zone = element(var.azs, count.index)
 
   tags = {
-    Name = "Private Subnet ${count.index + 1}"
+    Name = "private-subnet-${count.index + 1}"
   }
 }
 
@@ -33,7 +33,7 @@ resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "Project VPC IG"
+    Name = "vpc-ig-challenge"
   }
 }
 
@@ -46,7 +46,7 @@ resource "aws_route_table" "second_rt" {
   }
 
   tags = {
-    Name = "2nd Route Table"
+    Name = "2end-route-table-challenge"
   }
 }
 
