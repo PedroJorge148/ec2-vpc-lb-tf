@@ -3,3 +3,5 @@
 *.tfvars
 
 **/.terraform/*
+
+*key_pair*

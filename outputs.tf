@@ -21,3 +21,9 @@ output "public_dns" {
   sensitive   = false
   description = "DNS público do EC2"
 }
+
+output "public_id" {
+  value       = module.ec2.public_ip
+  sensitive   = false
+  description = "IP público do EC2"
+}
